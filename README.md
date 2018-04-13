@@ -1,3 +1,3 @@
 # Project-two
 
-Hello World!
+Hello World! We're connected!
