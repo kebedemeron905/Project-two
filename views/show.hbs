@@ -7,12 +7,18 @@
 <h3> Reflection: {{book.reflection}} </h3>
  <img src={{book.url}} alt="book imgs">
 
-
-
+<h2>Comments </h2>
  {{#each book.comments }}
-<p> Comment:{{comment}}</p>
-<p> Commented by:{{name}}</p>
-<form action="/{{../book.id}}/{{id}}?_method=delete" method="post">
-<input class="submit" type="submit" value="Delete Comment">
-</form>
+  <p>{{name}}</p> 
+  <p>{{comment}}</p>
+
 {{/each}}
+
+
+<form action="/{{book._id}}" method="post">
+<label>Comment: </label>
+<input type="text" name="comment">
+<label>Name:</label>
+<input type="text" name="name">
+<input class="submit" type="submit" value="Add comment">
+</form>

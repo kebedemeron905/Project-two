@@ -9,8 +9,18 @@ router.get('/', (req, res) => {
   book.find({}).then(books => res.render('index', {books}))
 })
 
+router.get('/new', (req, res) => {
+  res.render('new')
+})
+
 router.get('/:id', (req, res) => {
   book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
 })
 
+router.post('/', (req, res) => {
+  book.create(req.body)
+    .then(book => {
+      res.redirect('/')
+    })
+})
 module.exports = router
