@@ -1,0 +1,18 @@
+<h1><a href="/">Book ShelV</a></h1>
+
+<h2>{{book.title}}</h2>
+<h3> Author: {{book.author}} </h3>
+<h3> Genera: {{book.genera}} </h3>
+<h3> Published: {{book.published}} </h3>
+<h3> Reflection: {{book.reflection}} </h3>
+ <img src={{book.url}} alt="book imgs">
+
+
+
+ {{#each book.comments }}
+<p> Comment:{{comment}}</p>
+<p> Commented by:{{name}}</p>
+<form action="/{{../book.id}}/{{id}}?_method=delete" method="post">
+<input class="submit" type="submit" value="Delete Comment">
+</form>
+{{/each}}
