@@ -6,6 +6,12 @@
 <h3> Published: {{book.published}} </h3>
 <h3> Reflection: {{book.reflection}} </h3>
  <img src={{book.url}} alt="book imgs">
+<a href="edit/{{book.id}}">Edit</a>
+
+<form action="/{{book._id}}?_method=delete" method="post">
+  <input type="submit" value="Remove">
+</form>
+
 
 <h2>Comments </h2>
  {{#each book.comments }}
