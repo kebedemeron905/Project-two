@@ -6,12 +6,13 @@
   {{#each books as |book| }}
   <li>
     <a class ="box" href={{book._id}}><img class="images" src={{book.url}} alt="book imgs"></a>
-   <a class= "box" href={{book._id}}>{{book.author}}</a>
+   <a class="title" href={{book._id}}>{{book.author}}</a>
  
   </li>
 </ul>
-</div>
+
 {{/each}}
+</div>
 <form action="/new" method="get">
   <input  type="submit" value="Add to shelV">
 </form>

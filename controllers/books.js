@@ -13,13 +13,15 @@ router.get('/', (req, res) => {
 router.get('/new', (req, res) => {
   res.render('new')
 })
+
 router.post('/', (req, res) => {
-  console.log(req.body)
   book.create(req.body)
     .then(book => {
+      console.log(book)
       res.redirect('/')
     })
 })
+
 router.get('/:id', (req, res) => {
   book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
 })
@@ -35,6 +37,18 @@ router.put('/:id', (req, res) => {
   book.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
     .then(book => {
       res.redirect('/')
+    })
+})
+router.delete('/:id/:commentId', (req, res) => {
+  book.findById({_id: req.params.id})
+    .then((book) => {
+      book.comments.pull(req.params.commentId)
+      book.save()
+        .then(book => {
+          console.log('deleted comment in', book)
+          console.log(req.params.commentId)
+          res.redirect(`/${req.params.id}`)
+        })
     })
 })
 
@@ -57,15 +71,4 @@ router.post('/:id', (req, res) => {
     })
 })
 
-router.delete('/:id/:commentid', (req, res) => {
-  book.findById({_id: req.params.id})
-    .then((book) => {
-      book.comments.pull(req.params.commentid)
-      book.save()
-        .then(() => {
-          console.log(req.params.commentid)
-          res.redirect(`/${req.params.id}`)
-        })
-    })
-})
 module.exports = router
