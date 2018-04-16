@@ -6,6 +6,7 @@ const methodOverride = require('method-override')
 const booksController = require('./controllers/books')
 app.set('view engine', 'hbs')
 
+app.use('/assets', express.static('public'))
 app.use(methodOverride('_method'))
 app.use(parser.urlencoded({extended: true}))
 app.use('/', booksController)

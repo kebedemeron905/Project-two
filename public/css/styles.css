@@ -1,0 +1,30 @@
+
+
+
+.images{
+  height: 350px;
+  width: 250px;
+
+ 
+}
+
+.imgcontainer{
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 40px;
+  background-color: #fff;
+  color: #444;
+
+}
+
+.books {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 40px;
+  background-color: #fff;
+  color: #444;
+}
+
+/* .checked {
+  color: orange;
+}         */

@@ -6,7 +6,7 @@
 <h3> Published: {{book.published}} </h3>
 <h3> Reflection: {{book.reflection}} </h3>
  <img src={{book.url}} alt="book imgs">
-<a href="edit/{{book.id}}">Edit</a>
+<a href="edit/{{book.id}}"><button>Edit</button></a>
 
 <form action="/{{book._id}}?_method=delete" method="post">
   <input type="submit" value="Remove">
@@ -15,9 +15,16 @@
 
 <h2>Comments </h2>
  {{#each book.comments }}
-  <p>{{name}}</p> 
-  <p>{{comment}}</p>
-
+ 
+  <p>{{name}} rated it:   
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+  </p> 
+   <p>{{comment}}</p> 
+   <input class="submit" type="submit" value="Remove comment">
 {{/each}}
 
 

@@ -4,7 +4,7 @@ const express = require('express')
 const book = require('../models/book.js')
 const mongoose = require('../db/connection.js')
 const commentSchema = require('../models/comment.js')
-const comment = mongoose.model('Comment', commentSchema)
+const Comment = mongoose.model('Comment', commentSchema)
 
 router.get('/', (req, res) => {
   book.find({}).then(books => res.render('index', {books}))
@@ -42,6 +42,30 @@ router.delete('/:id', (req, res) => {
   book.findOneAndRemove({_id: req.params.id})
     .then(() => {
       res.redirect('/')
+    })
+})
+
+router.post('/:id', (req, res) => {
+  let newcomment = new Comment(req.body)
+  book.findById({_id: req.params.id})
+    .then((book) => {
+      book.comments.push(newcomment)
+      book.save()
+        .then(() => {
+          res.redirect(`/${req.params.id}`)
+        })
+    })
+})
+
+router.delete('/:id/:commentid', (req, res) => {
+  book.findById({_id: req.params.id})
+    .then((book) => {
+      book.comments.pull(req.params.commentid)
+      book.save()
+        .then(() => {
+          console.log(req.params.commentid)
+          res.redirect(`/${req.params.id}`)
+        })
     })
 })
 module.exports = router

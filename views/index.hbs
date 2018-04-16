@@ -1,14 +1,16 @@
 <h1> Book ShelV</h1>
 
+<div class="imgcontainer">
 <ul>
 
   {{#each books as |book| }}
   <li>
-    <a href={{book._id}}><img src={{book.url}} alt="book imgs"></a>
-   <a href={{book._id}}>{{book.author}}</a>
+    <a class ="box" href={{book._id}}><img class="images" src={{book.url}} alt="book imgs"></a>
+   <a class= "box" href={{book._id}}>{{book.author}}</a>
  
   </li>
 </ul>
+</div>
 {{/each}}
 <form action="/new" method="get">
   <input  type="submit" value="Add to shelV">
