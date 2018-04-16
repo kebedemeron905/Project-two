@@ -12,15 +12,15 @@ router.get('/', (req, res) => {
 router.get('/new', (req, res) => {
   res.render('new')
 })
-
-router.get('/:id', (req, res) => {
-  book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
-})
-
 router.post('/', (req, res) => {
+  console.log(req.body)
   book.create(req.body)
     .then(book => {
       res.redirect('/')
     })
 })
+router.get('/:id', (req, res) => {
+  book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
+})
+
 module.exports = router
