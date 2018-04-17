@@ -8,6 +8,15 @@ body {
  
 
 }
+
+.addbutton{
+ margin-left: 52em;
+ margin-top: -10em;
+ margin-bottom: 1em;
+ border-radius: 100px;
+ padding: 20px;
+ font-size: 25px;
+}
     
    .v {
      font-size:150px;
@@ -61,6 +70,7 @@ h1 {
   justify-content: space-around;
   text-decoration: none;
   padding: 20px -5px -20px 0px;
+  margin-bottom: 4em;
 
   
 
@@ -69,8 +79,8 @@ h1 {
 
 
 .showbookcover {
-  height: 550px;
-  width: 450px;
+  height: 450px;
+  width: 350px;
  
   float: left;
   margin: 35px;
@@ -109,7 +119,6 @@ input.edit {
 
   .editcontainer{
 
-   
     margin-left: 33em;
     margin-top: -3em;
     margin-bottom: 4em;
@@ -119,3 +128,24 @@ input.edit {
   .edittitle {
     text-align: left;
   }
+
+  .new {
+    display: block;
+    padding: 10px 60px;
+    text-align: left;
+    
+  }
+  .newcontainer{
+    margin-left: 33em;
+  
+  }
+
+  .titleheading {
+    font-size: 30px;
+
+  }
+  .propertiesfont{
+    font-size: 20px;
+    font-weight: inherit;
+  }
+  

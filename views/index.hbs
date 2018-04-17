@@ -1,5 +1,9 @@
 <h1> Bookshel<span class="v">V</span></h1>
 
+<form action="/new" method="get">
+  <input class="addbutton" type="submit" value="➕">
+</form>
+
 <div class="imgcontainer">
 
   {{#each books as |book| }}
@@ -10,7 +14,5 @@
    </div> --}}
 {{/each}}
 </div>
-<form action="/new" method="get">
-  <input  type="submit" value="Add to shelV">
-</form>
+
 
