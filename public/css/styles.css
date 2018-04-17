@@ -10,12 +10,12 @@ body {
 }
 
 .addbutton{
- margin-left: 52em;
+ margin-left: 92em;
  margin-top: -10em;
  margin-bottom: 1em;
  border-radius: 100px;
- padding: 20px;
- font-size: 25px;
+ padding: 10px;
+ font-size: 14px;
 }
     
    .v {
@@ -28,7 +28,8 @@ h1 {
  font-size: 100px;
  text-decoration: none;
  text-align: center;
- padding: 10px;
+ margin-top: -.5em;
+ 
  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
  -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: black;
@@ -149,3 +150,21 @@ input.edit {
     font-weight: inherit;
   }
   
+  .nav-bars {
+    text-align: right;
+    margin: 2em;
+    margin-right: 2em;
+    display: block;
+    list-style:none;
+    
+    
+  }
+
+  .nav-bars li a {
+    text-decoration: none;
+    color: black;
+    display: inline;
+   
+  }
+
+ 
