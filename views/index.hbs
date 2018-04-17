@@ -1,16 +1,13 @@
-<h1> Book ShelV</h1>
+<h1> Bookshel<span class="v">V</span></h1>
 
 <div class="imgcontainer">
-<ul>
 
   {{#each books as |book| }}
-  <li>
-    <a class ="box" href={{book._id}}><img class="images" src={{book.url}} alt="book imgs"></a>
-   <a class="title" href={{book._id}}>{{book.author}}</a>
- 
-  </li>
-</ul>
-
+    
+   <p><a class ="box" href={{book._id}}><img class="images" src={{book.url}} alt="book imgs"></a></p> 
+   {{!-- <div class="eachtitle">
+   <p><a  href={{book._id}}>{{book.author}}</a></p>
+   </div> --}}
 {{/each}}
 </div>
 <form action="/new" method="get">

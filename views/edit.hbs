@@ -1,28 +1,37 @@
 
-<h1><a href="/">Book ShelV</a></h1>
+<h1><a class= "showheading" href="/">Bookshel<span class="v">V</span></a></h1>
 
-<h2> Edit {{book.title}}</h2>
 
+
+
+<div class="editcontainer"> 
+  <h2 class= "edittitle"> Edit {{book.title}}</h2>
 <form action="/{{book.id}}?_method=put" method="post"> 
-<p>
-   <label>Title: </label>
+
+   <label class="edit">Title: </label>
     <input type="text" value="{{book.title}}" name="title"/>
+<br>
 
-<label> Author: </label>
+<label class= "edit"> Author: </label>
 <input type="text" value="{{book.author}}"name="author"/>
+<br>
 
-<label> Genera: </label>
+<label class="edit"> Genera: </label>
 <input type="text" value="{{book.genera}} "name="genera"/>
+<br>
 
-<label> Published: </label>
+<label class="edit"> Published: </label>
 <input type="number" value="{{book.published}}" name="published"/>
+<br>
 
-<label> Reflection: </label>
+<label class="edit"> Reflection: </label>
 <input type="text" value="{{book.reflection}}"  name="reflection"/>
+<br>
 
-<label> Url: </label>
+<label class="edit"> Url: </label>
 <input id= "image" value="{{book.url}}"  type="text" name="url"/>
-  
-</p>
+<br>
+
 <input type="submit" value="Update Book">
 </form>
+</div>

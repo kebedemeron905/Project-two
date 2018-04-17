@@ -1,19 +1,28 @@
-<h1><a href="/">Book ShelV</a></h1>
+<h1><a class= "showheading" href="/">Bookshel<span class="v">V</span></a></h1>
 
+
+ <img class="showbookcover" src={{book.url}} alt="book imgs">
+
+<div >
+<a class="showedit" href="edit/{{book.id}}"><button >Edit</button></a>
+</div>
+
+
+<form action="/{{book._id}}?_method=delete" method="post">
+  <input class="showremove" type="submit" value="Remove">
+</form>
+
+
+<div class="showproperties">
 <h2>{{book.title}}</h2>
 <h3> Author: {{book.author}} </h3>
 <h3> Genera: {{book.genera}} </h3>
 <h3> Published: {{book.published}} </h3>
 <h3> Reflection: {{book.reflection}} </h3>
- <img src={{book.url}} alt="book imgs">
-<a href="edit/{{book.id}}"><button>Edit</button></a>
-
-<form action="/{{book._id}}?_method=delete" method="post">
-  <input type="submit" value="Remove">
-</form>
+</div>
 
 
-<h2>Comments </h2>
+<h2>Read it? Share your thoughts or favourite quotes below:</h2>
  {{#each book.comments}}
  
   <p>{{name}} rated it:   

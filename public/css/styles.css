@@ -1,49 +1,121 @@
+body {
+
+  background-color: #f8f8f7;
+  color: #212121;
+  font-family: 'Karla', sans-serif;
+  height: 100%;
+  width: 100%;
+ 
+
+}
+    
+   .v {
+     font-size:150px;
+     color: rgb(193, 129, 11);
+   } 
+
 
 h1 {
- font-size: 40px;
+ font-size: 100px;
  text-decoration: none;
  text-align: center;
- padding: 40px;
- position: ;
+ padding: 10px;
+ -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: black;
+
+
 }
+
+.showheading{
+  font-size: 80px;
+  padding: 0px;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: black;
+
+ text-decoration: none;
+ 
+}
+
+.vshow{
+
+  font-size: 90px;
+}
+
 
 .images{
   height: 350px;
   width: 250px;
+  text-decoration: none;
 
 
  
 }
 
 .imgcontainer{
-  display: grid;
-  grid-template-rows: 100px 100px 100px 100px;
-  grid-template-columns: repeat(5, 100px 100px);
-  grid-column-gap: 250px;
-  margin: 0, auto;
-  /* background-color: black; */
-
-
-  
-
-}
-
-.box {
-  display: grid;
-  grid-template-rows: 100px 100px 100px 100px;
-  grid-template-columns: repeat(4, 100px);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-around;
   text-decoration: none;
+  padding: 20px -5px -20px 0px;
+
   
-  
-padding: 40px 20px;
-  /* background-color: rgb(0, 0, 0); */
+
 }
 
-.title{
-  text-align: center;
-  margin-top: 30px;
-  text-decoration: none;
+
+
+.showbookcover {
+  height: 550px;
+  width: 450px;
+ 
+  float: left;
+  margin: 35px;
+  margin-bottom: 30px;
+
+  }
+
+
+
+.box{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-around;
+  text-decoration: none;  
 }
-/* .checked {
-  color: orange;
-}         */
+
+.edit{
+  display: block;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+input.edit {
+  width: 95%;
+  height: 100px;
+}
+.showedit{
+  display:inline;
+}
+
+.showremove{
+  display: inline;
+}
+
+  .editcontainer{
+
+   
+    margin-left: 33em;
+    margin-top: -3em;
+    margin-bottom: 4em;
+
+  }
+
+  .edittitle {
+    text-align: left;
+  }
