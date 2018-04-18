@@ -27,7 +27,7 @@
  
   <p>{{name}}</p> 
    <p>{{comment}}</p> 
-   <form action="/{{../book.id}}/{{id}}?_method=delete" method="post">
+   <form action="/books/{{../book.id}}/{{id}}?_method=delete" method="post">
 <input type="submit" value="Remove comment"/>
 </form>
 {{/each}}
