@@ -5,7 +5,7 @@ const bookSchema = new mongoose.Schema({
   title: String,
   author: String,
   genera: String,
-  published: Number,
+  published: String,
   reflection: String,
   url: String,
   comments: [commentSchema]
