@@ -16,6 +16,7 @@ body {
  border-radius: 100px;
  padding: 10px;
  font-size: 14px;
+outline: none; 
 }
     
    .v {
@@ -167,4 +168,13 @@ input.edit {
    
   }
 
- 
+ .logincontainer{
+margin-left: 33em;
+display:block;
+ }
+
+ .signupcontainer{
+  margin-left: 33em;
+  display:block;
+
+ }

@@ -1,22 +1,19 @@
 <h1><a class= "showheading" href="/">Bookshel<span class="v">V</span></a></h1>
 
+<div class= "logincontainer">
 <h2>Login</h2>
 {{#if message }}
 <div>{{message}}</div>
 {{/if}}
 <form action="/user/login" method="post">
-
-<div>
-  <label for="email">Email: </label>
+  <label for="email">Email </label>
   <input type="text" name="email" id="email">
-</div>
-
-<div>
-  <label for="password">Password: </label>
+  <label for="password">Password </label>
   <input type="password" name="password" id="password">
+  <input type="submit">
+</form>
 </div>
 
-<input type="submit">
-</form>
+
 
 

@@ -18,7 +18,10 @@ app.use(parser.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))
 
-app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' }))
+app.use(session({
+  resave: true,
+  saveUninitialized: true,
+  secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS'}))
 app.use(flash())
 
 const passport = require('passport')
@@ -34,4 +37,9 @@ app.use(function (req, res, next) {
 
 app.use('/', booksController)
 app.use('/user', userController)
+
+app.set('port', process.env.PORT || 3001)
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
+})
 app.listen(4004, () => console.log('Running on port 4004!'))

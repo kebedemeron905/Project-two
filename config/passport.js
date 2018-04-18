@@ -40,7 +40,7 @@ module.exports = function (passport) {
     User.findOne({'local.email': email}, function (err, user) {
       if (err) return done(err)
       if (!user) {
-        return done(null, false, req.flash('loginMessage', 'No user exists for that. Please create an account.'))
+        return done(null, false, req.flash('loginMessage', 'No user exists under this email. Please create an account.'))
       }
       if (!user.validPassword(password)) {
         return done(null, false, req.flash('loginMessage', 'Incorrect password. Please try again'))
