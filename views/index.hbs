@@ -8,18 +8,6 @@
 
 </p>
 
-<script>
-function search() {
-  let button = document.querySelector("searchbutton")
-  let input = document.getElementById("search").value;
-  document.getElementById("user-pincode-show").innerHTML = input;
-  button.addEventListener('click', function () {
-  if (input === search.value) {
-   res.redirect('/show')
-  }
-}
-}
-</script>
 
 <form action="/new" method="get">
   <input class="addbutton"   type="submit" value="Add to shelV">
@@ -31,9 +19,6 @@ function search() {
   {{#each books as |book| }}
     
    <p><a class ="box" href={{book._id}}><img class="images" src={{book.url}} alt="book imgs"></a></p> 
-   {{!-- <div class="eachtitle">
-   <p><a  href={{book._id}}>{{book.author}}</a></p>
-   </div> --}}
 {{/each}}
 </div>
 

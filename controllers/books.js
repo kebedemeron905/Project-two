@@ -36,7 +36,7 @@ router.get('/edit/:id', (req, res) => {
 router.put('/:id', (req, res) => {
   book.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
     .then(book => {
-      res.redirect('/')
+      res.redirect(`/${req.params.id}`)
     })
 })
 
@@ -73,3 +73,4 @@ router.post('/:id', (req, res) => {
 })
 
 module.exports = router
+// js in view page
