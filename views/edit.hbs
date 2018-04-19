@@ -9,29 +9,29 @@
 <form action="/{{book.id}}?_method=put" method="post"> 
 
    <label class="edit">Title: </label>
-    <input type="text" value="{{book.title}}" name="title"/>
+    <input  class= "edit-input" type="text" value="{{book.title}}" name="title"/>
 <br>
 
 <label class= "edit"> Author: </label>
-<input type="text" value="{{book.author}}"name="author"/>
+<input class= "edit-input" type="text" value="{{book.author}}"name="author"/>
 <br>
 
 <label class="edit"> Genera: </label>
-<input type="text" value="{{book.genera}} "name="genera"/>
+<input class= "edit-input"type="text" value="{{book.genera}} "name="genera"/>
 <br>
 
 <label class="edit"> Published: </label>
-<input type="number" value="{{book.published}}" name="published"/>
+<input class= "edit-input" type="number" value="{{book.published}}" name="published"/>
 <br>
 
 <label class="edit"> Reflection: </label>
-<input type="text" value="{{book.reflection}}"  name="reflection"/>
+<input class= "edit-reflection" type="text" value="{{book.reflection}}"  name="reflection"/>
 <br>
 
 <label class="edit"> Url: </label>
-<input id= "image" value="{{book.url}}"  type="text" name="url"/>
+<input class= "edit-input" id= "image" value="{{book.url}}"  type="text" name="url"/>
 <br>
 
-<input type="submit" value="Update Book">
+<input class= "edit-button" type="submit" value="Update Book">
 </form>
 </div>

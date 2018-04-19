@@ -8,16 +8,23 @@
   <title>BookshelV</title>
 </head>
 <body>
+  <main>
   <nav>
     <ul class="nav-bars">
       {{#if currentUser}}
-      <li><a class="" href="/user/logout">Logout {{currentUser.local.email}}</a></li>
+      <li><a href="/user/logout">Logout {{currentUser.local.email}}</a></li>
       {{else}}
-      <li><a href="/user/login">Login</a></li>
-      <li><a href="/user/signup">Signup</a></li>
+        <li><a href="/user/login">Login</a></li>
+        <li><a href="/user/signup">Signup</a></li>
+  
       {{/if}}
     </ul>
   </nav>
   {{{body}}}
+</main>
+
+<footer>
+<p>© M E K</p>
+</footer>
 </body>
 </html>

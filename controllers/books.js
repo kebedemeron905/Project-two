@@ -26,6 +26,7 @@ router.get('/:id', (req, res) => {
   book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
 })
 
+// ask users to login in order to make edits
 router.get('/edit/:id', (req, res) => {
   book.findById({_id: req.params.id})
     .then(book => {
@@ -39,6 +40,7 @@ router.put('/:id', (req, res) => {
       res.redirect('/')
     })
 })
+
 router.delete('/:id/:commentId', (req, res) => {
   book.findById({_id: req.params.id})
     .then((book) => {
