@@ -3,12 +3,12 @@
 
  <img class="showbookcover" src={{book.url}} alt="book imgs">
 
-<div >
+<div class="edit-div">
 <a class="showedit" href="edit/{{book.id}}"><button >Edit</button></a>
 </div>
 
 
-<form action="/{{book._id}}?_method=delete" method="post">
+<form class="remove-forum" action="/{{book._id}}?_method=delete" method="post">
   <input class="showremove" type="submit" value="Remove">
 </form>
 
@@ -25,13 +25,13 @@
 <h2>Read it? Share your thoughts or favourite quotes below:</h2>
  {{#each book.comments}}
   <p><strong>{{name}}:</strong> {{comment}}</p> 
-   <form action="/books/{{../book.id}}/{{id}}?_method=delete" method="post">
+   <form action="/{{../book.id}}/{{id}}?_method=delete" method="post">
 <input type="submit" value="Remove comment"/>
 </form>
 {{/each}}
 
 <div class="comment-box">
-<form action="/{{book._id}}" method="post" class= >
+<form class="comment-forum"action="/{{book._id}}" method="post" class= >
 <label>Name:</label>
 <input type="text" name="name" class="comment-name">
 <label>Comment: </label>

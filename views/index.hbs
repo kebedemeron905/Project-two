@@ -1,11 +1,25 @@
 <h1> Bookshel<span class="v">V</span></h1>
 
 <p>
-  <form action="/" method="get" class="search-form">
-    <input class= "search-input" type="text" name="search" placeholder="Search Shelv">
-    <input type="submit" value="Search" class="searchbutton">
+  <form action="/" method="get" id="search" class="search-form">
+    <input id="search" class= "search-input" type="text"  placeholder="Search by Book Title">
+    <button type="submit" value="search" class="searchbutton">Search</button>
   </form>
+
 </p>
+
+<script>
+function search() {
+  let button = document.querySelector("searchbutton")
+  let input = document.getElementById("search").value;
+  document.getElementById("user-pincode-show").innerHTML = input;
+  button.addEventListener('click', function () {
+  if (input === search.value) {
+   res.redirect('/show')
+  }
+}
+}
+</script>
 
 <form action="/new" method="get">
   <input class="addbutton"   type="submit" value="Add to shelV">
@@ -23,5 +37,8 @@
 {{/each}}
 </div>
 
+
+
+{{!-- create a script that grabs "search" , when submit is clicked , it redirects to the view/show page--}}
 
 

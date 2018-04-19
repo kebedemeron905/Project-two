@@ -157,6 +157,14 @@ input.edit {
     font-size: 15px;
    }
 
+   .remove-forum{
+    display: inline;
+   }
+
+   .edit-div{
+   display: inline;
+
+   }
   .new {
     display: block;
     padding: 10px 100px;
@@ -210,6 +218,7 @@ input.edit {
  .logincontainer{
   margin-left: 30em;
   display:block;
+  margin-bottom: 15em;
   
  }
 
@@ -236,6 +245,7 @@ margin-bottom: 1em;
  .signupcontainer{
   margin-left: 30em;
   display:block;
+  margin-bottom: 15em;
   
  }
 
@@ -248,18 +258,26 @@ margin-bottom: 1em;
  }
 
  .comment-box {
-   float: left;
+   display: block;
+
  }
 
  .comment-input{
-  padding: 50px;
+  padding: 50px 100px;
+  display:block;
+  margin-top: 1em;
  }
 
-
+.comment-forum {
+  display: block;
+  padding: 10px;
+}
 
  .comment-name {
-
- padding: 5px;
+ margin-top: 1em;
+ margin-bottom: 4em;
+ padding: 5px 20px;
+ display:block;
 
  }
 
@@ -298,5 +316,5 @@ footer {
   position:absolute;
   width:100%;
   height:60px;   /* Height of the footer */
-  background:rgb(182, 223, 244);
+  background:rgb(214, 231, 240);
 }

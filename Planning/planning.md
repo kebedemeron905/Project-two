@@ -10,7 +10,8 @@ With that said, I'm going to have two models: book and comment.
   title: String,
   author: String,
   genera: String,
-  publicationdate: String,
+  reflection: String,
+  publication: String,
   url: Srting
 
 CommentSchema 
@@ -18,10 +19,7 @@ CommentSchema
   name: String
   ```
 
-Granted everything works well, I want to  add user authentication to the app, so I may add a third model called user. 
 
-
-
-For your wireframe, refer to this link: 
+Wirefram can be accessed here: 
 https://wireframe.cc/z1zd06
 
