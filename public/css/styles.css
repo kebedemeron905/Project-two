@@ -185,17 +185,25 @@ input.edit {
  .logincontainer{
   margin-left: 30em;
   display:block;
+  
  }
  
  #email {
  padding: 8px 60px;
+ margin-top: 1em;
  display: block;
+ margin-bottom: 1em;
  }
 
 #password{
 display: block;
 padding: 8px 60px;
+margin-top: 1em;
+margin-bottom: 1em;
+
 }
+
+
  .signupcontainer{
   margin-left: 30em;
   display:block;
