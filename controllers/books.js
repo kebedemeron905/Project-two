@@ -6,7 +6,7 @@ const commentSchema = require('../models/comment.js')
 const Comment = mongoose.model('Comment', commentSchema)
 
 router.get('/', (req, res) => {
-  book.find({}).then(books => res.render('index', {books}))
+  book.find({}).then(books => res.json(books))
 })
 
 router.get('/new', (req, res) => {
