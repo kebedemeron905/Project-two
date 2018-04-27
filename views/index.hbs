@@ -1,29 +1,42 @@
-<h1> Bookshel<span class="v">V</span></h1>
+{{!-- <h1> Bookshel<span class="v">V</span></h1>
 
 <p>
-  <form action="/" method="get" id="search" class="search-form">
-    <input id="search" class= "search-input" type="text"  placeholder="Search by Book Title">
-    <button type="submit" value="search" class="searchbutton">Search</button>
+  <form  id="newsearch" action="/" method="get"class="search-form">
+    <input id="newinput" class="search-input" type="text"  placeholder="Search by Book Title" maxlength="120">
+    <input type="submit" value="search" class="searchbutton">
   </form>
-
 </p>
+
+{{!-- create a script that grabs "search" , when submit is clicked , it redirects to the view/show page--}}
+<script>
+    let newSearch = document.getElementById('newsearch');
+    newSearch.addEventListener('submit',function(e) {
+        e.preventDefault();
+        let input = document.getElementById('newinput').value;
+        window.location.href = '/'+ input;
+});
+</script>
 
 
 <form action="/new" method="get">
-  <input class="addbutton"   type="submit" value="Add to shelV">
-  
+  <input class="addbutton"   type="submit" value="Add to shelV"> 
 </form>
 
 <div class="imgcontainer">
-
-  {{#each books as |book| }}
-    
+  {{#each books as |book| }} 
    <p><a class ="box" href={{book._id}}><img class="images" src={{book.url}} alt="book imgs"></a></p> 
 {{/each}}
-</div>
+</div> --}}
 
 
 
-{{!-- create a script that grabs "search" , when submit is clicked , it redirects to the view/show page--}}
+
+
+
+
+
+
+
+
 
 
