@@ -1,14 +1,14 @@
-<h1><a class= "showheading" href="/">Bookshel<span class="v">V</span></a></h1>
+<h1><a class= "showheading" href="/books">Bookshel<span class="v">V</span></a></h1>
 
 
  <img class="showbookcover" src={{book.url}} alt="book imgs">
 
 <div class="edit-div">
-<a class="showedit" href="edit/{{book.id}}"><button >Edit</button></a>
+<a class="showedit" href="/books/edit/{{book.id}}"><button >Edit</button></a>
 </div>
 
 
-<form class="remove-forum" action="/{{book._id}}?_method=delete" method="post">
+<form class="remove-forum" action="/books/{{book._id}}?_method=delete" method="post">
   <input class="showremove" type="submit" value="Remove">
 </form>
 
@@ -16,7 +16,7 @@
 <div class="showproperties">
 <h2 class= "titleheading">{{book.title}}</h2>
 <h3 class= "propertiesfont"> <strong>Author:</strong> {{book.author}} </h3>
-<h3 class= "propertiesfont"> <strong>Genera:</strong> {{book.genera}} </h3>
+<h3 class= "propertiesfont"> <strong>Genre:</strong> {{book.genre}} </h3>
 <h3 class= "propertiesfont"> <strong>Published:</strong> {{book.published}} </h3>
 <h3 class= "propertiesfont"> <strong>Reflection:</strong> {{book.reflection}} </h3>
 </div>
@@ -25,13 +25,13 @@
 <h2>Read it? Share your thoughts or favourite quotes below:</h2>
  {{#each book.comments}}
   <p><strong>{{name}}:</strong> {{comment}}</p> 
-   <form action="/{{../book.id}}/{{id}}?_method=delete" method="post">
+   <form action="/books/{{../book.id}}/{{id}}?_method=delete" method="post">
 <input type="submit" value="Remove comment"/>
 </form>
 {{/each}}
 
 <div class="comment-box">
-<form class="comment-forum"action="/{{book._id}}" method="post" class= >
+<form class="comment-forum"action="/books/{{book._id}}" method="post" class= >
 <label>Name:</label>
 <input type="text" name="name" class="comment-name">
 <label>Comment: </label>

@@ -4,7 +4,7 @@ const commentSchema = require('./comment.js')
 const bookSchema = new mongoose.Schema({
   title: String,
   author: String,
-  genera: String,
+  genre: String,
   published: String,
   reflection: String,
   url: String,

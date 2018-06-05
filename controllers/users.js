@@ -12,7 +12,7 @@ router.get('/signup', (req, res) => {
 
 router.post('/signup', (req, res) => {
   const signupStrategy = passport.authenticate('local-signup', {
-    successRedirect: '/',
+    successRedirect: '/books',
     failureRedirect: '/user/signup',
     failureFlash: true
   })
@@ -21,7 +21,7 @@ router.post('/signup', (req, res) => {
 
 router.post('/login', (req, res) => {
   const loginStrategy = passport.authenticate('local-login', {
-    successRedirect: '/',
+    successRedirect: '/books',
     failureRedirect: '/user/login',
     failureFlash: true
 
@@ -35,7 +35,7 @@ router.get('/login', (req, res) => {
 
 router.get('/logout', (req, res) => {
   req.logout()
-  res.redirect('/')
+  res.redirect('/books')
 })
 
 module.exports = router

@@ -1,7 +1,7 @@
 <h1> Bookshel<span class="v">V</span></h1>
 
 <p>
-  <form action="/" method="get" id="search" class="search-form">
+  <form action="/books" method="get" id="search" class="search-form">
     <input id="search" class= "search-input" type="text"  placeholder="Search by Book Title">
     <button type="submit" value="search" class="searchbutton">Search</button>
   </form>
@@ -9,7 +9,7 @@
 </p>
 
 
-<form action="/new" method="get">
+<form action="/books/new" method="get">
   <input class="addbutton"   type="submit" value="Add to shelV">
   
 </form>
@@ -18,7 +18,7 @@
 
   {{#each books as |book| }}
     
-   <p><a class ="box" href={{book._id}}><img class="images" src={{book.url}} alt="book imgs"></a></p> 
+   <p><a class ="box" href='/books/{{book._id}}'><img class="images" src={{book.url}} alt="book imgs"></a></p> 
 {{/each}}
 </div>
 
