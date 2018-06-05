@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const express = require('express')
-
 const book = require('../models/book.js')
 const mongoose = require('../db/connection.js')
 const commentSchema = require('../models/comment.js')
@@ -18,7 +17,7 @@ router.post('/', (req, res) => {
   book.create(req.body)
     .then(book => {
       console.log(book)
-      res.redirect('/')
+      res.redirect('/books')
     })
 })
 
@@ -36,7 +35,7 @@ router.get('/edit/:id', (req, res) => {
 router.put('/:id', (req, res) => {
   book.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
     .then(book => {
-      res.redirect('/')
+      res.redirect(`/books/${req.params.id}`)
     })
 })
 router.delete('/:id/:commentId', (req, res) => {
@@ -47,7 +46,7 @@ router.delete('/:id/:commentId', (req, res) => {
         .then(book => {
           console.log('deleted comment in', book)
           console.log(req.params.commentId)
-          res.redirect(`/${req.params.id}`)
+          res.redirect(`/books/${req.params.id}`)
         })
     })
 })
@@ -55,7 +54,7 @@ router.delete('/:id/:commentId', (req, res) => {
 router.delete('/:id', (req, res) => {
   book.findOneAndRemove({_id: req.params.id})
     .then(() => {
-      res.redirect('/')
+      res.redirect('/books')
     })
 })
 
@@ -66,7 +65,7 @@ router.post('/:id', (req, res) => {
       book.comments.push(newcomment)
       book.save()
         .then(() => {
-          res.redirect(`/${req.params.id}`)
+          res.redirect(`/books/${req.params.id}`)
         })
     })
 })

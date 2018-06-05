@@ -1,10 +1,10 @@
 
-<h1><a class= "showheading" href="/">Bookshel<span class="v">V</span></a></h1>
+<h1><a class= "showheading" href="/books">Bookshel<span class="v">V</span></a></h1>
 
 <div class="newcontainer">
 <h2>New Read Book: </h2>
 
-<form action="/" method="post" class= "addnew-forum">
+<form action="/books" method="post" class= "addnew-forum">
 <p>
 
 <label> Title: </label>
@@ -13,8 +13,8 @@
 <label class= "newlable"> Author: </label>
 <input class= "new" type="text" name="author"/>
 
-<label> Genera: </label>
-<input class= "new" type="text" name="genera"/>
+<label> Genre: </label>
+<input class= "new" type="text" name="genre"/>
 
 <label> Published: </label>
 <input class= "new" type="number" name="published"/>
@@ -27,7 +27,7 @@
 
 <input type="submit" value="Add Book" class="addbook">
 
-<form action="/" method="get">
+<form action="/books" method="get">
 <input type="submit" value="Go Back" >
 </form>
 

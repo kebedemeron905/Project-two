@@ -35,7 +35,7 @@ app.use(function (req, res, next) {
   next()
 })
 
-app.use('/', booksController)
+app.use('/books', booksController)
 app.use('/user', userController)
 
 app.set('port', process.env.PORT || 4004)
