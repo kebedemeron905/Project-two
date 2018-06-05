@@ -38,8 +38,7 @@ app.use(function (req, res, next) {
 app.use('/', booksController)
 app.use('/user', userController)
 
-app.set('port', process.env.PORT || 3001)
+app.set('port', process.env.PORT || 4004)
 app.listen(app.get('port'), () => {
   console.log(`✅ PORT: ${app.get('port')} 🌟`)
 })
-app.listen(4004, () => console.log('Running on port 4004!'))

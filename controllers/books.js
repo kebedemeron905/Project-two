@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const express = require('express')
+
 const book = require('../models/book.js')
 const mongoose = require('../db/connection.js')
 const commentSchema = require('../models/comment.js')
@@ -25,7 +26,6 @@ router.get('/:id', (req, res) => {
   book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
 })
 
-// ask users to login in order to make edits
 router.get('/edit/:id', (req, res) => {
   book.findById({_id: req.params.id})
     .then(book => {
@@ -36,10 +36,9 @@ router.get('/edit/:id', (req, res) => {
 router.put('/:id', (req, res) => {
   book.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
     .then(book => {
-      res.redirect(`/${req.params.id}`)
+      res.redirect('/')
     })
 })
-
 router.delete('/:id/:commentId', (req, res) => {
   book.findById({_id: req.params.id})
     .then((book) => {
@@ -73,4 +72,3 @@ router.post('/:id', (req, res) => {
 })
 
 module.exports = router
-// js in view page
