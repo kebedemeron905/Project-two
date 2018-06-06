@@ -17,6 +17,7 @@ app.use(cookieParser())
 
 app.set('view engine', 'hbs')
 app.use(parser.urlencoded({extended: true}))
+app.use(parser.json())
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))
 
@@ -40,10 +41,11 @@ app.use(function (req, res, next) {
 app.use('/books', booksController)
 app.post('/search', (req, res) => {
   book.findOne({
-    'book.title': req.body.search
+    'title': req.body.search
   })
   console.log(`${req.body}`)
   console.log((`${req.body.search}`))
+  console.log(book.title)
   res.json({app})
 })
 app.use('/user', userController)
