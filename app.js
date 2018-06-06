@@ -9,6 +9,8 @@ const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const booksController = require('./controllers/books')
 const userController = require('./controllers/users')
+const mongoose = require('mongoose')
+const book = mongoose.model('book')
 
 app.use(morgan('dev'))
 app.use(cookieParser())
@@ -36,6 +38,14 @@ app.use(function (req, res, next) {
 })
 
 app.use('/books', booksController)
+app.post('/search', (req, res) => {
+  book.findOne({
+    'book.title': req.body.search
+  })
+  console.log(`${req.body}`)
+  console.log((`${req.body.search}`))
+  res.json({app})
+})
 app.use('/user', userController)
 
 app.set('port', process.env.PORT || 4004)

@@ -25,19 +25,22 @@
 <h2>Read it? Share your thoughts or favourite quotes below:</h2>
  {{#each book.comments}}
   <p><strong>{{name}}:</strong> {{comment}}</p> 
-   <form action="/books/{{../book.id}}/{{id}}?_method=delete" method="post">
-<input type="submit" value="Remove comment"/>
-</form>
-{{/each}}
 
-<div class="comment-box">
-<form class="comment-forum"action="/books/{{book._id}}" method="post" class= >
-<label>Name:</label>
-<input type="text" name="name" class="comment-name">
-<label>Comment: </label>
-<input type="text" name="comment" class= "comment-input">
+<form action="/books/{{../book.id}}/{{id}}?_method=delete" method="post">
+    <input type="submit" value="Remove comment"/>
+    </form>
+    {{/each}}
 
-<input class="submit" type="submit" value="Add comment">
+    <div class="comment-box">
+    <form class="comment-forum"action="/books/{{book._id}}" method="post" class= >
+
+    <label>Name:</label>
+    <input type="text" name="name" class="comment-name">
+
+    <label>Comment: </label>
+    <input type="text" name="comment" class= "comment-input">
+
+    <input class="submit" type="submit" value="Add comment">
 </form>
 </div>
 </div>
