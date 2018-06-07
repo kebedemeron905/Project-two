@@ -9,12 +9,15 @@ const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const booksController = require('./controllers/books')
 const userController = require('./controllers/users')
+const mongoose = require('mongoose')
+const book = mongoose.model('book')
 
 app.use(morgan('dev'))
 app.use(cookieParser())
 
 app.set('view engine', 'hbs')
 app.use(parser.urlencoded({extended: true}))
+app.use(parser.json())
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))
 
@@ -36,6 +39,14 @@ app.use(function (req, res, next) {
 })
 
 app.use('/books', booksController)
+app.post('/search', (req, res) => {
+  const bookTitle = req.body.bookTitle
+  book.findOne({}).then(book => res.render('show', {bookTitle}))
+  console.log((`${req.body.bookTitle}`))
+  // res.json({})
+  // book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
+})
+
 app.use('/user', userController)
 
 app.set('port', process.env.PORT || 4004)
