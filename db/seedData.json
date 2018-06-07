@@ -112,6 +112,18 @@
 },
 
 {
+  "title": "The Stranger",
+  "author": "Albert Camus",
+  "genre": "Philosophical fiction",
+  "published": "1942",
+  "reflection": " “I realized then that a man who had lived only one day could easily live for a hundred years in prison. He would have enough memories to keep him from being bored.” ",
+  "url": "https://images-na.ssl-images-amazon.com/images/I/81rNFIU-FxL.jpg",
+  
+  "comments":[]
+
+},
+
+{
   "title": "The Immortal Life of Henrietta Lacks",
   "author": "Rebecca Skloot",
   "genre": "Biography",
@@ -147,19 +159,6 @@
 },
 
 {
-  "title": "Temsalet",
-  "author": "Aida Muluneh",
-  "genre": "Fiction",
-  "published": "2014",
-  "reflection": " Coming Soon ",
-  "url": "http://www.tsehaistore.com/pub/media/catalog/product/cache/75eed2686e01eb22cb4050b2f40ddf97/t/e/temsalet-english-cover_1.png",
-  
-  "comments":[]
-
-},
-
-
-{
   "title": "The Man Who Mistook His Wife For a Hat",
   "author": "Oliver Sacks",
   "genre": "Fiction",
@@ -170,6 +169,21 @@
   "comments":[]
 
 }
+
+
+{
+  "title": "Temsalet",
+  "author": "Aida Muluneh",
+  "genre": "Fiction",
+  "published": "2014",
+  "reflection": " Coming Soon ",
+  "url": "http://www.tsehaistore.com/pub/media/catalog/product/cache/75eed2686e01eb22cb4050b2f40ddf97/t/e/temsalet-english-cover_1.png",
+  
+  "comments":[]
+
+}
+
+
 
 
 
