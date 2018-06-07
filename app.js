@@ -40,14 +40,13 @@ app.use(function (req, res, next) {
 
 app.use('/books', booksController)
 app.post('/search', (req, res) => {
-  book.findOne({
-    'title': req.body.search
-  })
-  console.log(`${req.body}`)
-  console.log((`${req.body.search}`))
-  console.log(book.title)
-  res.json({app})
+  const bookTitle = req.body.bookTitle
+  book.findOne({}).then(book => res.render('show', {bookTitle}))
+  console.log((`${req.body.bookTitle}`))
+  // res.json({})
+  // book.findById({_id: req.params.id}).then(book => res.render('show', { book }))
 })
+
 app.use('/user', userController)
 
 app.set('port', process.env.PORT || 4004)

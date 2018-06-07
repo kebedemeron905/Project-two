@@ -150,11 +150,16 @@ input.edit {
   
   }
 
- 
   .edit-reflection {
     padding: 100px;
     text-align: left;
     font-size: 15px;
+    display: block;
+   }
+
+   .edit-button{
+     margin-bottom: 3em;
+     padding: 10px;
    }
 
    .remove-forum{
