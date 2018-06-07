@@ -77,7 +77,7 @@
   "author": "Amor Towles",
   "genre": "Historical Fiction",
   "published": "2016",
-  "reflection": "Coming Soon",
+  "reflection": "“After all, what can a first impression tell us about someone we’ve just met for a minute in the lobby of a hotel? For that matter, what can a first impression tell us about anyone? Why, no more than a chord can tell us about Beethoven, or a brushstroke about Botticelli. By their very nature, human beings are so capricious, so complex, so delightfully contradictory, that they deserve not only our consideration, but our reconsideration—and our unwavering determination to withhold our opinion until we have engaged with them in every possible setting at every possible hour.” ",
   "url": "https://images.penguinrandomhouse.com/cover/9780670026197",
   
   "comments":[]
@@ -92,7 +92,7 @@
   "author": "Hermann Hesse",
   "genre": "Fiction",
   "published": "1922",
-  "reflection": "Coming Soon ",
+  "reflection": "“Words do not express thoughts very well. they always become a little different immediately they are expressed, a little distorted, a little foolish. And yet it also pleases me and seems right that what is of value and wisdom to one man seems nonsense to another.”",
   "url": "https://images-na.ssl-images-amazon.com/images/I/919x8J4GspL.jpg",
   
   "comments":[]
@@ -159,9 +159,6 @@
 },
 
 
-
-
-
 {
   "title": "The Man Who Mistook His Wife For a Hat",
   "author": "Oliver Sacks",
@@ -172,10 +169,19 @@
   
   "comments":[]
 
+},
+
+{
+  "title": "The Stranger",
+  "author": "Albert Camus",
+  "genre": "Philosophical fiction",
+  "published": "1942",
+  "reflection": " “I realized then that a man who had lived only one day could easily live for a hundred years in prison. He would have enough memories to keep him from being bored” ",
+  "url": "https://images-na.ssl-images-amazon.com/images/I/81rNFIU-FxL.jpg",
+  
+  "comments":[]
+
 }
-
-
-
 
 
 ]
